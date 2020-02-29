@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding:0;
+    outline: none;
+    text-decoration: none;
+}
+html{height:100%;}
+body{
+height:100%;
+display: grid;
+grid-template-columns:1fr 1fr 1fr ;
+grid-template-rows: 1fr 2fr 8fr 2fr;
+background: linear-gradient(90deg, pink , rgb(255, 255, 255) 30%);
+}
+header{
+    grid-column: 1/4;
+    background-color: rgb(0, 0, 138);
+    display:grid;
+    grid-template-columns: 1fr;
+    font-family: Comic Sans MS,sans-serif;
+}
+
+#logo{
+color:white;
+font-size: 3em;
+}
+.headert{
+    justify-self: center;
+}
+.registration-article{
+    background-color:  rgb(0, 0, 138);
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding: 10px;
+    border-radius: 5%;
+}
+.registration-article form{
+    display:grid;
+    grid-gap: .4em;
+    grid-template-columns: 4fr 4fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.registration-text{
+    color:white;
+    font-size: 1.2em;
+    font-family: Comic Sans MS,sans-serif;
+    grid-column: 1/2;
+}
+.enter{
+    grid-column: 2/3;
+}
+.check{
+    color:white;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.registr-input{
+align-self: center;
+text-align: center;
+
+}
+.registr-input{
+    border-radius: 5px;
+    border:1px double white;
+    height: 70%;
+}
+.registr-input:focus{
+    border-color:yellow;
+}
+input[type="submit"]{
+    font-family: Comic Sans MS,sans-serif;
+    font-weight: bold;
+    width:100%;
+    height: 100%;
+    color:black;
+    border:1px solid white;
+    background: linear-gradient(to left,white 50% ,rgb(133, 133, 255) 50%);
+    background-size: 200% auto;
+    background-position: 100% 100%;
+    transition: all .4s ease .1s;
+}
+input[type="submit"]:hover{
+   background-position: 0 100%;
+   color: white;
+   transition: all .4s ease .1s;
+}
+#r-text{
+    grid-row: 3/5;
+}
+#gender{
+    grid-column: 1/4;
+    grid-row: 6/8;
+    text-align: center;
+
+    border:1px solid white;
+}
+#gender2{
+    border:1px solid white;
+   display: grid;
+   grid-template-columns: 1fr 1fr; 
+   grid-column: 1/4;
+   text-align: center;
+   align-items: center;
+}
+input[type="radio"]{
+    margin-left: 20px;
+}
+.error{
+    color:white;
+    font-family: Comic Sans MS,sans-serif;
+    grid-column: 1/4;
+}

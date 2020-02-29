@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    outline: none;
+}
+html{
+    height:100%;
+}
+body{
+    background: linear-gradient(90deg, yellow , rgb(255, 255, 255) 30%);
+height:100%;
+overflow: auto;
+display: grid;
+grid-template-columns: 1fr 6fr;
+grid-template-rows: 1fr 12fr 1fr;
+grid-gap: 0.5em;
+}
+aside{
+    border:1px solid black ;
+    grid-row: 2/3;
+}
+.article{
+    border:1px solid black ;
+grid-column: 2/3;
+}
+header{
+    border:1px solid black ;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 12fr 4fr;
+    background-color: rgb(0, 0, 0);
+    border-top: 2px double silver;
+    border-bottom: 2px double silver;
+    
+}
+#pad,#logo{
+    float: left;
+
+}
+#logo{
+    color:yellow;
+    
+}
+
+#pad{
+height:100%;
+width:100%;}
+.headert,.serve{
+    font-family: Comic Sans MS,sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#butt-ser{border-radius: 10px;
+    border:1px solid silver;
+    background-color: rgba(255,255,255,0);
+   border-radius:0px 10px 10px 0px ;
+    border:0px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.field1{
+    background-color: rgba(255,255,255,0);
+    border-radius: 10px;
+    border:1px solid silver; 
+    box-sizing: border-box;
+    border:none;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+    font-family: Comic Sans MS,sans-serif;
+   
+}
+#form1:focus{
+    border:1px double yellow;
+}
+#form1:hover{
+    background-position: 0,0;
+    transition: .7s;
+}
+form{ 
+    display: grid;
+    grid-template-rows:1fr 2fr 1fr ;
+    justify-items: center;
+    align-items: center;
+}
+#form1{
+    display: grid;
+    grid-row: 2/3;
+    grid-template-columns: 4fr 1fr;
+    height:100%;
+    background: linear-gradient(to right,yellow,white 50%);
+    background-size:200%;
+    background-position: 100%,100%;
+    border-radius: 10px;
+
+    border:1px solid silver;
+    transition: .7s;
+}
+#pad{
+    margin-left: 20px;
+    height:100%;
+    width:40%;
+}
+
+.serve{
+    color: rgb(94, 10, 173);
+    font-size: 2em;
+    align-self: flex-start;
+    justify-self: center;
+}
+#service{
+    height:100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    justify-self:end;
+    grid-gap: 1em;
+
+}
+.serve:hover{
+color: brown;   
+transition: all 0.2s ease-in 0.2s;
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.menu-default{
+    display: grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: 8fr 1fr 1fr 1fr 1fr ;
+    border-color: silver;
+    border-style: double;
+    border-top:1px;
+    border-left: 1px;
+    justify-content: center;
+    background-color: black;
+    justify-items: center;
+    align-items: baseline;
+    transition: opacity 1s ease .2s,font-size 0s ease 0s;
+}
+.menu-after{
+    opacity: 0;
+    font-size: 0;
+    transition: opacity 1s ease .2s,font-size 0s ease 1.2s;
+}
+/*#left-aside{
+    width:70%;
+    height:50%;
+    margin-left:20%;
+    display: block;
+    justify-content: center;
+}*/
+.menu{
+    
+    position: relative;
+    font-family: Comic Sans MS, sans-serif;
+    margin-top:1em;
+    color:yellow;
+    display: block;
+    font-size: 1em;
+}
+#menu1{grid-row: 2/3;}
+#menu2{grid-row: 3/4;}
+#menu3{grid-row: 4/5;}
+#menu4{grid-row: 5/6;}
+.menu:after{
+content: '';
+position: absolute;
+bottom:0;
+left:0;
+width:0;
+height:0%;
+opacity: 0;
+border-bottom: 1px solid yellow;
+text-align: center;
+justify-content: center;
+}
+.menu:hover:after{
+    width:100%;
+    opacity: 1;
+    transition:0s ease opacity 0s,.8s ease width .2s; 
+}
+.btn-menu{
+    width:70%;
+    position: relative;
+    bottom: 0;
+    background: yellow;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+#butt-menu{
+    top:50%;
+    left:25%
+}
+#butt-menu:after,#butt-menu:before{
+       content: '';
+}
+#butt-menu:after,#butt-menu:before,#butt-menu{
+    position: absolute;
+    box-sizing: border-box;
+   width: 100%;
+    height:2px;
+    background-color: rgb(0, 0, 0);
+}
+#butt-menu{
+    width: 50%;
+}
+#butt-menu:after{
+    transform: translateY(-5px);
+}
+#butt-menu:before{
+    transform: translateY(5px);
+}
+footer{
+    background-color: black;
+    color: yellow;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
