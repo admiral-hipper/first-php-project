@@ -65,7 +65,7 @@ if($result->num_rows){
                  <input class="search" id="butt-ser" type="submit" value="&#128269;">
              </form>
              </div>
-             
+             <span><a href="" class="menu" id="menu0">My page</a></span>
              <span><a href="" class="menu" id="menu1">Friends</a></span>
              <span><a href="" class="menu" id="menu2">Messages</a></span>
              <span><a href="" class="menu" id="menu3">Edit Profile</a></span>
