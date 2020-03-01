@@ -8,7 +8,7 @@ html{
     height:100%;
 }
 body{
-    background: linear-gradient(90deg, pink , rgb(255, 255, 255) 30%);
+    background: linear-gradient(90deg, rgb(228, 228, 228), rgb(255, 255, 255) 25%);
 height:100%;
 overflow: auto;
 display: grid;
@@ -20,7 +20,7 @@ aside{
     border:1px solid black ;
     grid-row: 2/3;
 }
-.article{                              /*ARTICLE*/
+.article{              /*ARTICLE*/
 grid-column: 2/3;
 display: grid;
 grid-template-columns:1fr;
@@ -165,14 +165,14 @@ transition: all 0.2s ease-in 0.2s;
     background-color:  rgb(0, 0, 138);
     justify-items: center;
     align-self: start;
-    transition: opacity 1s ease .2s,font-size 0s ease 0s;
+    transition: opacity 0s ease 0s,font-size 0s ease 0s;
 }
 .menu-after{
     grid-row: 2/2;
     grid-column: 1/1;
     opacity: 0;
     font-size: 0;
-    transition: opacity 1s ease .2s,font-size 0s ease 1.2s;
+    transition: opacity 0s ease 0s,font-size 0s ease 0s;
 }
 /*#left-aside{
     width:70%;
@@ -237,8 +237,8 @@ justify-content: center;
     transform: translateY(5px);
 }
 footer{
-     background-color: rgb(238, 238, 238);;
-    color: rgb(133, 39, 133);;
+     background-color: rgb(0, 0, 138);
+    color: white;
     grid-column: 1/4;
     grid-row: 3/4;
 }
