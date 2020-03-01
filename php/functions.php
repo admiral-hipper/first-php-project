@@ -60,7 +60,7 @@ if($result->num_rows){
                  </section>
          </header>
          <div class="menu-default">
-            <div id="form1"> <form action="" method="post">
+            <div id="form1"> <form id="search" action="" method="post">
                  <input class="field1" type="search" placeholder="Поиск учасников">
                  <input class="search" id="butt-ser" type="submit" value="&#128269;">
              </form>

@@ -105,10 +105,10 @@ header{                              /*HEADER*/
     font-family: Comic Sans MS,sans-serif;
    
 }
-form:focus{
+#search:focus{
     border:1px double yellow;
 }
-form:hover{
+#search:hover{
     background-position: 0,0;
     transition: .7s;
 }
@@ -117,7 +117,7 @@ form:hover{
    grid-template-rows: 1fr 2fr 1fr;
    width: 90%;
 }
-form{
+#search{
 
     width:100%;
     display: grid;
