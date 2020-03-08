@@ -46,6 +46,7 @@ if($result->num_rows){
      <html>
      <head>
          <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>Document</title>
          <link rel="stylesheet" href="../css/grid.css">
          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
