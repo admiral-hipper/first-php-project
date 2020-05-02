@@ -40,7 +40,7 @@ if($result->num_rows){
     echo stripslashes($row['text'])."<br style='clear:left;'><br>";
 }
 }
- function echo_header(){
+ function echo_header($user_name){
      echo<<<_END
      <!DOCTYPE html>
      <html>
@@ -48,8 +48,13 @@ if($result->num_rows){
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>Document</title>
-         <link rel="stylesheet" href="../css/grid.css">
+         <link rel="stylesheet" href="../css/profile.css">
+         <script src="https://kit.fontawasome.com/52b02e8afc.js"></script>
          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">       
      </head>
      <body class="sait">
          <header><span class="btn-menu"><span id="butt-menu"></span></span>
@@ -66,15 +71,12 @@ if($result->num_rows){
                  <input class="search" id="butt-ser" type="submit" value="&#128269;">
              </form>
              </div>
-             <span><a href="" class="menu" id="menu0">My page</a></span>
-             <span><a href="" class="menu" id="menu1">Friends</a></span>
-             <span><a href="" class="menu" id="menu2">Messages</a></span>
-             <span><a href="" class="menu" id="menu3">Edit Profile</a></span>
-             <span><a href="" class="menu" id="menu4">Settings</a></span> 
+             <span><a href="index.php" class="menu" id="menu0">My page <i class="fa fa-user" aria-hidden="true"></i></a></span>
+             <span><a href="" class="menu" id="menu1">Friends <i class="fa fa-users" aria-hidden="true"></i></a></span>
+             <span><a href="" class="menu" id="menu2">Messages <i class="fa fa-comments-o" aria-hidden="true"></i></a></span>
+            <span><a href="profile.php?d=$user_name" class="menu" id="menu2">Edit Profile<i class="fa fa-pencil" aria-hidden="true"></i></a></span>
+             <span><a href="" class="menu" id="menu5">Settings <i class="fa fa-cogs" aria-hidden="true"></i></a></span> 
          </div>
-         <script>
-         </script>
-         <script src="../javascript.js"></script>
          <div class="article">
      _END;
  }
@@ -87,4 +89,3 @@ return true;
 return false;
  }
 ?>
-

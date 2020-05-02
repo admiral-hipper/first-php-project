@@ -14,12 +14,15 @@ if(isset($_POST['login'])){
     $result=queryMysql("SELECT * FROM members WHERE login='$login'");
     if(!$result)
         $error="This name isn't avaible";
-    elseif($login&&$password&&$username&&$gender&&$country&&$city){
+    elseif(!($login&&$password&&$username&&$country&&$city)){
         $error="one of these fields aren't filled ";
     }
     else{
         $members=queryMysql("INSERT INTO members VALUES (NULL,'$login','$password')");
-        $profile=queryMysql("INSERT INTO profiles VALUES(NULL,'$username',NULL,'$country','$city',NULL,'$gender')");
+        $members=queryMysql("SELECT id FROM members WHERE login='$login' AND password='$password'");
+        $my_row=$members->fetch_array(MYSQLI_BOTH);
+        $id_reg=$my_row[0];
+        $profile=queryMysql("INSERT INTO profiles VALUES('$id_reg','$username',NULL,'$country','$city',NULL,'$gender')");
         if(!$members||!$profile){die("ERROR");}
         else{
         $_SESSION['uname']=$login;
@@ -29,7 +32,7 @@ if(isset($_POST['login'])){
             $row=$result->fetch_array(MYSQLI_NUM);
             $_SESSION['id']=$row[0];
             $remove=<<<_end
-            <script>document.location.href="edit_profile.php"</script>
+            <script>document.location.href="profile.php"</script>
             _end;
         }
     
@@ -61,8 +64,8 @@ echo<<<_END
             <span class="registration-text">Username</span><input name="username" id="r-username" type="text" class="registr-input"><span id="login" class="check" required='required'></span>
             <span class="registration-text" id="gender">Choose gender 
             <span class="registration-text" id="gender2">
-                <span><span>Man</span><input type="radio" name="gender" value="0"></span>
-                <span><span>Woman</span><input type="radio" name="gender" value="1"></span>
+                <span><span>Man</span><input type="radio" name="gender" value="1"></span>
+                <span><span>Woman</span><input type="radio" name="gender" value="2"></span>
             </span>
         </span>
             <span class="registration-text">Country</span><input name="country" class="registr-input" type="text" required='required'><span></span>

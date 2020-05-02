@@ -4,8 +4,11 @@
         setTimeout('')
         $('.article').toggleClass('article-after')
     })
-   function O(obj){
-       return typeof obj=='object'?obj:document.getElementById(obj)
-   }
+   $('#add-publ').click(function(){
+    $('#new-pub').css('display','grid')
+})
+function O(obj){
+    return typeof obj=='object'?obj:document.getElementById(obj)
+}
     
     

@@ -14,7 +14,7 @@ background: linear-gradient(90deg, pink , rgb(255, 255, 255) 30%);
 }
 header{
     grid-column: 1/4;
-    background-color: rgb(0, 0, 138);
+    background-color: dodgerblue;
     display:grid;
     grid-template-columns: 1fr;
     font-family: Comic Sans MS,sans-serif;
@@ -28,7 +28,7 @@ font-size: 3em;
     justify-self: center;
 }
 .registration-article{
-    background-color:  rgb(0, 0, 138);
+    background-color:  dodgerblue;
     grid-column: 2/3;
     grid-row: 3/4;
     padding: 10px;
@@ -109,4 +109,9 @@ input[type="radio"]{
     color:white;
     font-family: Comic Sans MS,sans-serif;
     grid-column: 1/4;
+}
+@media screen and (max-width:1100px){
+.registration-article{
+    margin-top: 2em;
+}
 }

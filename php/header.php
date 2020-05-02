@@ -25,6 +25,6 @@ if(!$loginend){
  </html>
  _END;  
 }else
-echo_header();
+echo_header($user_name);
 
 ?>
